@@ -1,10 +1,17 @@
 const arr = ['eat', 'ate', 'tea', 'dream', 'mared']
 
 const anagram = (arr)=>{
-    const sortArr = arr.map((item)=>{
+    let sortArr = arr.map((item)=>{
         return item.split('').sort().join('')
     })
-    console.log("sortArr", sortArr)
+    const groupedArr = Object.values(
+        sortArr.reduce((acc, str) => {
+            acc[str] = acc[str] || []
+            acc[str].push(str)
+            return acc
+        },{})
+    )
+    console.log("sortArr", groupedArr)
 }
 
 anagram(arr);
