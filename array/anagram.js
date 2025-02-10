@@ -1,3 +1,9 @@
+/**
+ * collect the item made with similar alphabet
+ * and store in child array
+ */
+
+
 const arr = ['eat', 'ate', 'tea', 'dream', 'mared']
 
 const anagram = (arr)=>{
