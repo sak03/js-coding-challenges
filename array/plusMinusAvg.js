@@ -7,7 +7,7 @@
  * arr = [1,1,0,-1,-1]
  * There are  elements, two positive, two negative and one zero. Their ratios are
  * 2/5=0.40000
- * 1/5=0.50000
+ * 1/5=0.20000
  * 2/5=0.40000
  */
 
