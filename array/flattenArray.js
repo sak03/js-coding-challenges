@@ -17,8 +17,25 @@ const flattenArr2 = (arr) => {
         const val = acc.concat(Array.isArray(cur) ? flattenArr2(cur) : cur);
         return val
     },[])
-    console.log("Result2: ", flatArr)
     return flatArr
 }
 const Result2 = flattenArr2(arrs)
-console.log("Result2: ", Result2)
+// console.log("Result2: ", Result2)
+
+// method 3: for loop method
+const flattenArr3 = (arr)=>{
+    let newArr = [];
+    const recurFn = (inputArr)=>{
+        for (let i = 0; i < inputArr.length; i ++){
+            if (Array.isArray(inputArr[i])){
+                recurFn(inputArr[i])
+            }else{
+                newArr.push(inputArr[i])
+            }
+        }
+     }
+    recurFn(arr)
+    return newArr
+}
+const result3 = flattenArr3(arrs);
+console.log("result3", result3)
