@@ -14,7 +14,7 @@ const checkAnagram = (str1, str2)=>{
         return false
     }
 }
-console.log(checkAnagram('name',"men"))
+console.log(checkAnagram('name',"menr"))
 
 
 
